@@ -213,20 +213,23 @@ class _MyHomePageState extends State<MyHomePage> {
                 height: 50.0,
               ),
             ),
-            Expanded(
-              child: Column(
-                children: <Widget>[
-                  Text(
-                    '$_counter',
-                    style: TextStyle(color: textColor, fontSize: 100.0),
-                  ),
-                  Divider(),
-                  Text(
-                    'Total sets: $_totalSets',
-                  ),
-                ],
-              ),
-            ),
+            Container(
+                width: MediaQuery.of(context).size.width,
+                alignment: AlignmentDirectional.center,
+                padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                child: Column(
+                  children: <Widget>[
+                    Text(
+                      '$_counter',
+                      style: TextStyle(
+                          color: textColor, fontSize: 100.0, height: 1.5),
+                    ),
+                    Divider(),
+                    Text(
+                      'Total sets: $_totalSets',
+                    ),
+                  ],
+                )),
           ],
         ),
       ),
